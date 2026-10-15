@@ -10,10 +10,10 @@ import java.util.List;
 public class InMemoryNewsCatalog implements NewsCatalog{
 
     private final List<NewsSummary> news = List.of(
-            new NewsSummary("Deadlock", "Вышло новое обновление 0.22"),
-            new NewsSummary("League of Legends", "Обзор обновления 26.19"),
-            new NewsSummary("Counter Strike 2", "Вышло обновление с курицами и яицами"),
-            new NewsSummary("Dota 2", "Обзор обновления 7.41f")
+            new NewsSummary("Deadlock", "Вышло новое обновление 0.22", "бла бла бла какие то изменения"),
+            new NewsSummary("League of Legends", "Обзор обновления 26.19", "бла бла бла какие то изменения"),
+            new NewsSummary("Counter Strike 2", "Вышло обновление с курицами и яицами", "бла бла бла какие то изменения"),
+            new NewsSummary("Dota 2", "Обзор обновления 7.41f", "бла бла бла какие то изменения")
     );
 
     @Override

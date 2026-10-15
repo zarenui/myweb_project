@@ -8,7 +8,9 @@
         <h1 th:text="${newsDetails.title}">Название</h1>
         <dl>
             <dt>Описание</dt>
-            <dd th:text="${newsDetails.text}">Описание</dd>
+            <dd th:text="${newsDetails.mainText}">Описание</dd>
+            <dt>Список изменений</dt>
+            <dd th:text="${newsDetails.description}">Список изменений</dd>
         </dl>
     </article>
     <p th:replace="~{fragments/footer}"></p>

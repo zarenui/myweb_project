@@ -4,18 +4,15 @@
 <body>
 <header th:replace="~{fragments/navbar}"></header>
 <main id="main-content" class="container">
-    <h1>Игры</h1>
-    <p>Все игры, по которым мы составляем новости.</p>
-    <p>
-        <strong>Количество игр</strong>
-        <span th:text="${newsInfos.size()}">Количество новостей</span>
-    </p>
+    <h1>Новости</h1>
+    <p>Обзоры обновлений и изменений в играх.</p>
+
     <div class="grid" th:if="${!#lists.isEmpty(newsInfos)}">
         <article class="card" th:each="news : ${newsInfos}">
             <h2 th:text="${news.title}">Название</h2>
             <p>
                 <strong>Описание:</strong>
-                <span th:text="${news.text}">Описание</span>
+                <span th:text="${news.mainText}">Описание</span>
             </p>
             <a th:href="@{/news/{newsTitle}(newsTitle=${news.title})}">
                 Подробнее
