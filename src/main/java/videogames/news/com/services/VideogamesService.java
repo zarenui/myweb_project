@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface VideogamesService {
     List<VideogamesSummary> allVideogames();
+    VideogamesSummary gameDetails(String videogameTitle);
 }

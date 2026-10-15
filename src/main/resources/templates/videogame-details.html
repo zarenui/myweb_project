@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head}"></head>
+<body>
+<header th:replace="~{fragments/navbar}"></header>
+<main id="main-content" class="container">
+    <article class="card">
+        <h1 th:text="${videogameDetails.title}">Название</h1>
+        <dl>
+            <dt>Жанр</dt>
+            <dd th:text="${videogameDetails.genre()}">Жанр</dd>
+        </dl>
+    </article>
+    <p th:replace="~{fragments/footer}"></p>
+    <a th:href="@{/games}">Вернуться к списку</a>
+</main>
+</body>
+</html>

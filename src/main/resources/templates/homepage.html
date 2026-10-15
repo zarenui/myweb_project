@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head}"></head>
+<body>
+<header th:replace="~{fragments/navbar}"></header>
+<main id="main-content" class="container">
+    <h1>Новостной сайт про видеоигры</h1>
+
+    <h2 th:text="${message}">Привет</h2>
+
+    <p th:replace="~{fragments/footer}"></p>
+</main>
+</body>
+</html>

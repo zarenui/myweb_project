@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head}"></head>
+<body>
+<header th:replace="~{fragments/navbar}"></header>
+<main id="main-content" class="container">
+    <h1>Игры</h1>
+    <p>Все игры, по которым мы составляем новости.</p>
+    <p>
+        <strong>Количество игр</strong>
+        <span th:text="${videogameInfos.size()}">Количество игр</span>
+    </p>
+    <div class="grid" th:if="${!#lists.isEmpty(videogameInfos)}">
+        <article class="card" th:each="videogame : ${videogameInfos}">
+            <h2 th:text="${videogame.title}">Название</h2>
+            <p>
+                <strong>Жанр:</strong>
+                <span th:text="${videogame.genre}">Жанр</span>
+            </p>
+            <a th:href="@{/games/{videogameTitle}(videogameTitle=${videogame.title})}">
+                Подробнее
+            </a>
+        </article>
+    </div>
+
+    <p th:if="${#lists.isEmpty(videogameInfos)}">
+        Игры пока не добавлены.
+    </p>
+    <p th:replace="~{fragments/footer}"></p>
+</main>
+</body>
+</html>
